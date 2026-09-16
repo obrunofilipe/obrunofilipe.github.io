@@ -3,124 +3,74 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Personal website of Bruno Pereira — researcher in cybersecurity, operating systems, and ransomware detection.">
-  <title>Bruno Pereira — Researcher</title>
+  <meta name="description" content="Bruno Pereira — researcher in cybersecurity, operating systems, and ransomware detection.">
+  <title>Bruno Pereira</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav container">
-      <a class="brand" href="#top">Bruno Pereira</a>
-      <div class="nav-links">
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="name" href="#home">Bruno Pereira</a>
+      <nav>
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#education">Education</a>
         <a href="#publications">Publications</a>
         <a href="#contact">Contact</a>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
-  <main id="top">
-    <section class="hero container">
-      <div class="hero-copy">
-        <p class="eyebrow">Researcher · Cybersecurity · Operating Systems</p>
-        <h1>Bruno<br><span>Pereira</span></h1>
-        <p class="lead" id="hero-summary"></p>
-        <div class="actions">
-          <a class="button primary" href="#research">Explore my work</a>
-          <a class="button secondary" href="CV.pdf">Download CV</a>
-        </div>
+  <main id="home" class="wrap layout">
+    <aside class="sidebar">
+      <div class="portrait">
+        <img src="bruno.jpg" alt="Bruno Pereira"/>
       </div>
-      <aside class="hero-card">
-        <div class="status-dot"></div>
-        <p class="card-label">Currently</p>
-        <h2>Doctoral Program<br>in Informatics</h2>
-        <p>University of Minho</p>
-        <p class="muted">Research Assistant at INESC TEC</p>
-      </aside>
-    </section>
+      <h1>Bruno Pereira</h1>
+      <p class="role">Research Assistant<br>HASLab — INESC TEC</p>
+      <p class="place">Braga, Portugal</p>
+      <div class="links">
+        <a id="email-side" href="#"></a>
+        <a href="CV.pdf">Curriculum Vitae</a>
+      </div>
+    </aside>
 
-    <section id="about" class="section container">
-      <div class="section-heading">
-        <p class="eyebrow">01 — About</p>
-        <h2>Turning security research into practical protection.</h2>
-      </div>
-      <div class="about-grid">
-        <p id="about-text"></p>
-        <div>
-          <div class="info-block">
-            <span>Based in</span>
-            <strong id="location"></strong>
-          </div>
-          <div class="info-block">
-            <span>Languages</span>
-            <strong id="languages"></strong>
-          </div>
-          <div class="info-block">
-            <span>Email</span>
-            <a id="email-link" href="#"></a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <article class="content">
+      <section id="about">
+        <p class="label">About me</p>
+        <p class="intro" id="about-text"></p>
+      </section>
 
-    <section id="research" class="section section-alt">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">02 — Research & expertise</p>
-          <h2>What I work on</h2>
-        </div>
-        <div class="research-grid" id="skills"></div>
-      </div>
-    </section>
+      <section id="research">
+        <p class="label">Research</p>
+        <p>My current research interests include:</p>
+        <ul class="research-list" id="skills"></ul>
+      </section>
 
-    <section id="education" class="section container">
-      <div class="section-heading">
-        <p class="eyebrow">03 — Education</p>
-        <h2>Academic journey</h2>
-      </div>
-      <div class="timeline" id="education-list"></div>
-    </section>
+      <section id="education">
+        <p class="label">Education</p>
+        <div id="education-list"></div>
+      </section>
 
-    <section id="experience" class="section section-alt">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">04 — Experience</p>
-          <h2>Research in practice</h2>
-        </div>
-        <div class="timeline" id="experience-list"></div>
-      </div>
-    </section>
+      <section id="experience">
+        <p class="label">Experience</p>
+        <div id="experience-list"></div>
+      </section>
 
-    <section id="publications" class="section container">
-      <div class="section-heading">
-        <p class="eyebrow">05 — Publications</p>
-        <h2>Selected work</h2>
-      </div>
-      <div id="publication-list"></div>
-    </section>
+      <section id="publications">
+        <p class="label">Publications</p>
+        <div id="publication-list"></div>
+      </section>
 
-    <section id="contact" class="section contact-section">
-      <div class="container contact-card">
-        <div>
-          <p class="eyebrow">06 — Contact</p>
-          <h2>Let's connect.</h2>
-          <p>I'm interested in research collaborations, cybersecurity, ransomware detection, and related systems work.</p>
-        </div>
-        <div class="contact-links">
-          <a id="contact-email" href="#"></a>
-          <a id="phone-link" href="#"></a>
-          <a id="cv-link" href="CV.pdf">CV ↗</a>
-        </div>
-      </div>
-    </section>
+      <section id="contact">
+        <p class="label">Contact</p>
+        <p>Email: <a id="email-main" href="#"></a></p>
+        <p>Languages: <span id="languages"></span></p>
+      </section>
+
+      <footer>© <span id="year"></span> Bruno Pereira</footer>
+    </article>
   </main>
-
-  <footer class="footer container">
-    <span>© <span id="year"></span> Bruno Pereira</span>
-    <span>Built for GitHub Pages</span>
-  </footer>
 
   <script src="data.js"></script>
   <script src="script.js"></script>

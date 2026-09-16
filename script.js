@@ -1,58 +1,44 @@
 const $ = (id) => document.getElementById(id);
 
-$("hero-summary").textContent = siteData.summary;
 $("about-text").textContent = siteData.about;
-$("location").textContent = siteData.location;
-$("languages").textContent = siteData.languages.join(" · ");
+$("languages").textContent = siteData.languages.join(", ");
 
 const emailHref = `mailto:${siteData.email}`;
-$("email-link").textContent = siteData.email;
-$("email-link").href = emailHref;
-$("contact-email").textContent = siteData.email;
-$("contact-email").href = emailHref;
+for (const id of ["email-side", "email-main"]) {
+  $(id).textContent = siteData.email;
+  $(id).href = emailHref;
+}
 
-$("phone-link").textContent = siteData.phone;
-$("phone-link").href = `tel:${siteData.phone.replace(/\s/g, "")}`;
-
-$("skills").innerHTML = siteData.skills.map((skill, i) => `
-  <article class="skill-card">
-    <span class="skill-number">${String(i + 1).padStart(2, "0")}</span>
-    <h3>${skill}</h3>
-  </article>
-`).join("");
+$("skills").innerHTML = siteData.skills.map(skill => `<li>${skill}</li>`).join("");
 
 $("education-list").innerHTML = siteData.education.map(item => `
-  <article class="timeline-item">
-    <div class="timeline-meta">${item.period}</div>
-    <div>
+  <div class="item">
+    <div class="item-head">
       <h3>${item.degree}</h3>
-      <p class="institution">${item.institution}</p>
-      ${item.description ? `<p>${item.description}</p>` : ""}
+      <span class="period">${item.period}</span>
     </div>
-  </article>
+    <p class="institution">${item.institution}</p>
+    ${item.description ? `<p class="description">${item.description}</p>` : ""}
+  </div>
 `).join("");
 
 $("experience-list").innerHTML = siteData.experience.map(item => `
-  <article class="timeline-item">
-    <div class="timeline-meta">${item.period}</div>
-    <div>
+  <div class="item">
+    <div class="item-head">
       <h3>${item.role}</h3>
-      <p class="institution">${item.organization}</p>
-      <p>${item.description}</p>
+      <span class="period">${item.period}</span>
     </div>
-  </article>
+    <p class="institution">${item.organization}</p>
+    <p class="description">${item.description}</p>
+  </div>
 `).join("");
 
 $("publication-list").innerHTML = siteData.publications.map(item => `
-  <article class="publication">
-    <div>
-      <p class="publication-date">${item.date}</p>
-      <h3>${item.title}</h3>
-      <p>${item.authors}</p>
-      <p class="institution">${item.venue}</p>
-    </div>
-    ${item.link ? `<a class="text-link" href="${item.link}" target="_blank" rel="noopener">View publication ↗</a>` : ""}
-  </article>
+  <div class="item publication">
+    <h3>${item.title}${item.link ? ` <a href="${item.link}" target="_blank" rel="noopener">↗</a>` : ""}</h3>
+    <p>${item.authors}</p>
+    <p>${item.venue} · ${item.date}</p>
+  </div>
 `).join("");
 
 $("year").textContent = new Date().getFullYear();

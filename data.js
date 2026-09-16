@@ -1,3 +1,7 @@
+/*
+  EDIT THIS FILE when you want to update your website.
+  You do not need to change index.html for normal content updates.
+*/
 const siteData = {
   name: "Bruno Pereira",
   email: "bruno.f.pereira@inesctec.pt",
