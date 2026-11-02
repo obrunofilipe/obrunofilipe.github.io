@@ -63,7 +63,7 @@ const siteData = {
     },
     {
       role: "Project - Rescueware: Intelligent and Self-configurable Cybersecurity and Data Recovery for Ransomware Resilience",
-      period: "Feb 2926 -  Current",
+      period: "Feb 2026 -  Current",
       organization: "HASLab - INESC TEC",
       description: "The project goal is to develop a new storage recovery solution capable of protecting storage systems from ransomware attacks"
     },
