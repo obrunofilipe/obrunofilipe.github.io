@@ -9,7 +9,9 @@ for (const id of ["email-side", "email-main"]) {
   $(id).href = emailHref;
 }
 
-$("skills").innerHTML = siteData.skills.map(skill => `<li>${skill}</li>`).join("");
+//$("skills").innerHTML = siteData.skills.map(skill => `<li>${skill}</li>`).join("");
+
+$("research_interests").innerHTML = siteData.research_interests.map(research_interests => `<li>${research_interests}</li>`).join("");
 
 $("education-list").innerHTML = siteData.education.map(item => `
   <div class="item">

@@ -16,6 +16,13 @@ const siteData = {
     //"Since 2022, I have been working as a Research Assistant at INESC TEC, focusing primarily on security and operating systems. My research has increasingly centered on ransomware analysis and protection, driven by the growing impact of ransomware attacks on society and critical infrastructures. I am particularly motivated by the need to develop more effective protection strategies against this evolving threat.",
     "I have been a research assistant at INESC TEC since 2022. My research focuses on ransomware analysis, detection, and recovery. I have performed behavioural analyses of ransomware on Linux and Android Operating Systems and tested different machine learning detection solutions. From 2019 to 2022, I completed my bachelor’s degree in Informatics Engineering at the University of Minho. I then pursued a master’s degree from 2022 to 2025, during which I developed my thesis titled “Towards Optimized Development and Testing of Ransomware Detection Solutions”. My research analysed the development process of ransomware detection solutions and introduced a prototype aimed at optimizing the reproducibility of existing and new ML-based detection solutions. From May to June 2024, I joined the DistriNet research unit from KU Leuven University in Belgium as a visiting scholar. During this time, I collaborated closely with researchers Vera Rimmer and Lieven Desmet on topics related to Machine Learning explainability in the field of malware detection. This experience provided me with valuable insights that significantly contributed to the development of my master’s thesis. In March 2025, I started a PhD in Informatics, enrolling in the PDINF program. My research targets the development of ransomware-resilient storage solutions capable not only of detecting attacks but also of recovering from them with a zero-data-loss guarantee.",
 
+  research_interests: [
+    "Ransomware Analysis",
+    "Operating systems",
+    "Data Security",
+    "Storage Protection"
+  ],
+
   skills: [
     "Ransomware analysis and detection",
     "Operating systems, data security, and encryption",
